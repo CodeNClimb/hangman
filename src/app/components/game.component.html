@@ -1,0 +1,154 @@
+<section>
+    <br />
+    <h1 id='game-header'>
+        <div id=home-icon-wrapper>
+            <mat-icon fontIcon="home" (click)="goToHome();" id='home-icon'>
+            </mat-icon>
+        </div>
+        <span>
+            HANGMAN
+        </span>
+    </h1>
+    <div id='hangman-homepage-drawing-wrapper'>
+        <div id='centre-hangman-svg'>
+            <svg xmlns='http://www.w3.org/2000/svg' height='330' width='330'>
+                <line x1='20' x2='80' y1='320' y2='320' stroke='black' stroke-width='5' stroke-linecap='round' id = 'attempt-1' />
+                <line x1='50' y1='20' x2='50' y2='320' stroke='black' stroke-width='5' id = 'attempt-2'/>
+                <line x1='47.5' x2=' 200' y1='20' y2='20' stroke='black' stroke-width='5' id = 'attempt-3'/>
+                <line x1='200' y1='17.5' x2='200' y2='70' stroke='black' stroke-width='5' id = 'attempt-4'/>
+                <line x1='105' y1='20' x2='50' y2='70' stroke='black' stroke-width='5' id = 'attempt-5'/>
+                <circle cx='200' cy='98' r='30' fill='none' stroke='black' stroke-width='5' id = 'attempt-6'/>
+                <line x1='200' y1='130' x2='200' y2='200' stroke='black' stroke-width='5' id = 'attempt-7' />
+                <line x1='200' y1='150' x2='240' y2='200' stroke='black' stroke-width='5' stroke-linecap='round' id = 'attempt-8'/>
+                <line x1='200' y1='150' x2='160' y2='200' stroke='black' stroke-width='5' stroke-linecap='round' id = 'attempt-9'/>
+                <line x1='200' y1='200' x2='160' y2='250' stroke='black' stroke-width='5' stroke-linecap='round' id = 'attempt-10'/>
+                <line x1='200' y1='200' x2='240' y2='250' stroke='black' stroke-width='5' stroke-linecap='round' id = 'attempt-11'/>
+            </svg>
+        </div>
+    </div>
+
+    <div id='game-wrapper'>
+        <div id='vertically-align-game-wrapper'>
+
+            <div>
+                <div id='game-description' style="display:none">
+                    <h3 id='word-header'>
+                        THE WORD IS ...
+                    </h3>
+                    <h4 id='note-about-words'>
+                        NB: Most words are spelt in american english.
+                        <br />
+                        Names are also possible words.
+                    </h4>
+                    <h2 id='attempts'>
+                        Attempts Remaining : {{7 - this.game.getAttempts}} / 7
+                    </h2>
+                    <br />
+                </div>
+                <div id='word-container'>
+                    <button mat-raised-button id='start-game-button' color='warn' (click)="startGame();"
+                        [disabled]='loading' [class.spinner]='loading'>
+                        Start Game
+                    </button>
+                    <table>
+                        <tbody>
+                            <tr id='insert-word-box'>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <table id="keyboard">
+                <tbody>
+                    <tr>
+                        <td><button mat-stroked-button color='warn' id="guessing-keyboard-a"
+                                (click)="checkWord('a');">a</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('b')"
+                                id="guessing-keyboard-b">b</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('c')"
+                                id="guessing-keyboard-c">c</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('d')"
+                                id="guessing-keyboard-d">d</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('e')"
+                                id="guessing-keyboard-e">e</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('f')"
+                                id="guessing-keyboard-f">f</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('g')"
+                                id="guessing-keyboard-g">g</button></td>
+                    </tr>
+                    <tr>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('h')"
+                                id="guessing-keyboard-h">h</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('i')"
+                                id="guessing-keyboard-i">i</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('j')"
+                                id="guessing-keyboard-j">j</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('k')"
+                                id="guessing-keyboard-k">k</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('l')"
+                                id="guessing-keyboard-l">l</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('m')"
+                                id="guessing-keyboard-m">m</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('n')"
+                                id="guessing-keyboard-n">n</button></td>
+                    </tr>
+                    <tr>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('o')"
+                                id="guessing-keyboard-o">o</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('p')"
+                                id="guessing-keyboard-p">p</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('q')"
+                                id="guessing-keyboard-q">q</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('r')"
+                                id="guessing-keyboard-r">r</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('s')"
+                                id="guessing-keyboard-s">s</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('t')"
+                                id="guessing-keyboard-t">t</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('u')"
+                                id="guessing-keyboard-u">u</button></td>
+                    </tr>
+                    <tr>
+                        <td><button mat-stroked-button disabled color='warn' id='hidden-button'></button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('v')"
+                                id="guessing-keyboard-v">v</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('w')"
+                                id="guessing-keyboard-w">w</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('x')"
+                                id="guessing-keyboard-x">x</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('y')"
+                                id="guessing-keyboard-y">y</button></td>
+                        <td></td>
+                        <td><button mat-stroked-button color='warn' (click)="checkWord('z')"
+                                id="guessing-keyboard-z">z</button></td>
+                        <td></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>

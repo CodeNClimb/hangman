@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+#home-icon {
+    transform: scale(2.2);
+    padding-bottom: 10px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#home-icon:hover {
+    transform: scale(3) !important ;
+    padding-bottom: 5px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+
+#game-alpha{
+    text-align: center;
+}
+
+#guess-word {
+    height: 100vh;
+
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    padding-top: 7vh;
+    border-spacing: 5px;
+    
+}
+
+
+button[mat-raised-button] {
+   width: 200px;
+   height: 100px;
+   
+}
+
+button[mat-stroked-button] {
+    color:black
+}
+button[mat-stroked-button]:hover {
+    background-color: #d3d3d3;
+}
+
+#hidden-button {
+    display: none;
+}
+
+#word-header {
+    font-size: 40px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+#note-about-words {
+    font-family: 'Patrick Hand', cursive;
+}
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+   
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    border-top-color: #000000;
+    animation: spinner .8s linear infinite;
+  }
+
+#game-component-svg {
+    transform:scale(1.5);
+    padding-top:40px;
+    padding-left: 23%;
+}
+#attempts {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+
+#letter{
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    font-size:30px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:top;
+
+}
+
+#start-game-button {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#start-game-button:hover{
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+
+#game-header {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+
+#game-wrapper {
+    width: 50%;
+    height: 100vh; 
+    
+}
+
+
+#vertically-align-game-wrapper{
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 35%;
+    left: 150%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+#centre-hangman-svg {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+svg {
+    transform: scale(2.2);
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+line,circle {
+    -webkit-animation: fadeIn 3s;
+    animation: fadeIn 3s;
+}
+#keyboard {
+    display: none;
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 850px) and (max-width: 1500px) {
+    svg {
+        transform: scale(1.5);
+    }
+
+
+}

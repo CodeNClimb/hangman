@@ -1,0 +1,55 @@
+<section>
+    <h1 id='game-header'>
+        <div id=home-icon-wrapper>
+            <mat-icon fontIcon="home" (click)="goToHome();" id='home-icon'>
+            </mat-icon>
+        </div>
+        <br/>
+        <div>
+            HANGMAN
+        </div>
+
+    </h1>
+    <div id='hangman-homepage-drawing-wrapper'>
+        <div id='centre-hangman-svg'>
+            <svg xmlns='http://www.w3.org/2000/svg' height='330' width='330' id="hangman-svg">
+                <line x1='50' y1='20' x2='50' y2='320' stroke='black' stroke-width='5' />
+                <line x1='47.5' x2=' 200' y1='20' y2='20' stroke='black' stroke-width='5' />
+                <line x1='20' x2='80' y1='320' y2='320' stroke='black' stroke-width='5' stroke-linecap='round' />
+                <line x1='200' y1='17.5' x2='200' y2='70' stroke='black' stroke-width='5' />
+                <line x1='105' y1='20' x2='50' y2='70' stroke='black' stroke-width='5' />
+                <circle cx='200' cy='98' r='30' fill='none' stroke='black' stroke-width='5' />
+                <line x1='200' y1='130' x2='200' y2='200' stroke='black' stroke-width='5' />
+                <line x1='200' y1='200' x2='240' y2='250' stroke='black' stroke-width='5' stroke-linecap='round' />
+                <line x1='200' y1='150' x2='240' y2='200' stroke='black' stroke-width='5' stroke-linecap='round' />
+                <line x1='200' y1='150' x2='160' y2='200' stroke='black' stroke-width='5' stroke-linecap='round' />
+                <line x1='200' y1='200' x2='160' y2='250' stroke='black' stroke-width='5' stroke-linecap='round' />
+            </svg>
+        </div>
+    </div>
+    <div id='difficulty-wrapper'>
+        <div id = vertically-align-difficulty> 
+   
+        <div>
+            <h3 id='difficulty-header'>
+                DIFFICULTY
+            </h3>
+            <br />
+            <div id=difficulty-selector-buttons>
+                <button mat-raised-button color="warn" [disabled]='easyLoading' [class.spinner]='easyLoading'
+                    id='easy-difficulty-button' (click)="DifficultySelector('easy');">{{easy}}</button>
+                <br /><br />
+                <button mat-raised-button color="warn" [disabled]='mediumLoading' [class.spinner]='mediumLoading'
+                    id='medium-difficulty-button' (click)="DifficultySelector('medium')">{{medium}}</button>
+                <br /><br />
+                <button mat-raised-button color="warn" [disabled]='hardLoading' [class.spinner]='hardLoading'
+                    id='hard-difficulty-button' (click)="DifficultySelector('hard')">{{hard}}</button>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</section>

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Press+Start+2P&display=swap');
+#game-header {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+   
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    border-top-color: #000000;
+    animation: spinner .8s linear infinite;
+  }
+  #vertically-align-play-button {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 35%;
+    left: 150%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+#centre-hangman-svg {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
+#hangman-svg {
+    transform: scale(2.2);
+}
+
+#difficulty-wrapper {
+   width: 50%;
+   float: left;
+   height: 100vh;
+
+}
+#vertically-align-difficulty {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 35%;
+    left: 150%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+button[mat-raised-button] {
+    width:300px !important;
+    height:200px !important;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+button[mat-raised-button]:hover {
+    width:300px !important;
+    height:200px !important;
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+mat-icon {
+    transform: scale(2);
+    padding-top: 10px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+mat-icon:hover {
+    transform:  scale(3);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#difficulty-header {
+    font-size: 50px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+button:disabled,
+button[disabled] {
+    background-color: blue;
+
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 850px) and (max-width: 1500px) {
+    #hangman-svg {
+        transform: scale(1.5);
+    }
+    button[mat-raised-button] {
+        width:200px !important;
+        height:100px !important;
+    }
+    button[mat-raised-button]:hover {
+        width:200px !important;
+        height:100px !important;
+    }
+
+
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 550px) and (max-width: 800px) {}
+/* mobiles (landscape and portrait) */
+@media only screen and (min-width: 320px) and (max-width: 500px) {}

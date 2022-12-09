@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Press+Start+2P&display=swap');
+#game-header {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+}
+
+#single-player-game-button, #double-player-game-button {
+    width: 10%;
+    height: 10vh;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#single-player-game-button:hover, #double-player-game-button:hover {
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#play-game-button-wrapper {
+    width: 50%;
+    height: 100vh; 
+    
+}
+
+
+#vertically-align-play-button {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 35%;
+    left: 150%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+#centre-hangman-svg {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+svg {
+    transform: scale(2.2);
+}
+
+button { 
+    width:300px !important;
+    height:200px !important;
+ } 
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 850px) and (max-width: 1500px) {
+    svg {
+        transform: scale(1.5);
+    }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 550px) and (max-width: 800px) {}
+/* mobiles (landscape and portrait) */
+@media only screen and (min-width: 320px) and (max-width: 500px) {}

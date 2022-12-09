@@ -1,0 +1,36 @@
+
+<h1 id='game-header'>
+  <br/>
+  <span>
+    HANGMAN
+  </span>
+</h1>
+<div id='hangman-homepage-drawing-wrapper'>
+  <div id = 'centre-hangman-svg'> 
+  <svg xmlns='http://www.w3.org/2000/svg' height='330' width='330'>
+    <line x1='50' y1='20' x2='50' y2='320' stroke='black' stroke-width='5' />
+    <line x1='47.5' x2=' 200' y1='20' y2='20' stroke='black' stroke-width='5' />
+    <line x1='20' x2='80' y1='320' y2='320' stroke='black' stroke-width='5' stroke-linecap='round' />
+    <line x1='200' y1='17.5' x2='200' y2='70' stroke='black' stroke-width='5' />
+    <line x1='105' y1='20' x2='50' y2='70' stroke='black' stroke-width='5' />
+    <circle cx='200' cy='98' r='30' fill='none' stroke='black' stroke-width='5' />
+    <line x1='200' y1='130' x2='200' y2='200' stroke='black' stroke-width='5' />
+    <line x1='200' y1='200' x2='240' y2='250' stroke='black' stroke-width='5' stroke-linecap='round' />
+    <line x1='200' y1='150' x2='240' y2='200' stroke='black' stroke-width='5' stroke-linecap='round' />
+    <line x1='200' y1='150' x2='160' y2='200' stroke='black' stroke-width='5' stroke-linecap='round' />
+    <line x1='200' y1='200' x2='160' y2='250' stroke='black' stroke-width='5' stroke-linecap='round' />
+  </svg>
+</div>
+</div>
+<div id = 'play-game-button-wrapper'> 
+  <div id='vertically-align-play-button'>
+   
+    <button mat-flat-button color="warn" id='single-player-game-button' (click)="normalPlay()">NORMAL PLAY</button>
+    <br />
+    <br />
+    <button mat-flat-button color="warn" id='double-player-game-button'(click)="timedPlay()">TIMED PLAY</button>
+  
+  </div>
+</div>
+
+<router-outlet></router-outlet>

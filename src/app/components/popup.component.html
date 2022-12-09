@@ -1,0 +1,15 @@
+<mat-card id = 'pop-message'>
+    <mat-card-title id = 'message'>
+        {{message}}
+        <br>
+        {{word}}
+    </mat-card-title>
+    <mat-card-content>
+        <span>
+            <button mat-flat-button color="primary" (click)="PopUpClicked('restart')">Play Again</button>  
+            {{'&emsp;'}}
+            <button mat-flat-button color="primary" (click)="PopUpClicked('')">End Game</button>
+        </span>
+    </mat-card-content>
+</mat-card>
+
